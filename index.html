@@ -1,13 +1,58 @@
 <!DOCTYPE html>
-<html>
-  <head>
-	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>使用教程</title>
-  </head>
-  <body>	
-	<h1>使用教程</h1>
-	<p>1.下载好游戏和模拟器 </p>
-    <p>2.把下载好的吉里吉里模拟器安装。将下载好的游戏压缩包解压，会找到"启动游戏.xp3"这个文件，记住文件目录，再打开吉里吉里模拟器在右侧目录中找到启动游戏.xp3文件
-    点击就能启动游戏<p>
-  </body>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>未知-1</title>
+</head>
+<body>
+
+<script>
+// 弹窗内容数组
+var popupContents = [
+    "哎呀！",
+    "不小心把你带到这个地方了",
+    "真是可恶啊～",
+    "亲爱的，不要害怕～",
+    "其实呢",
+    "这也没有么什么，对吧？",
+    "哈哈～",
+    "老实点，亲爱的",
+    "你已经不是这台设备的主人了",
+    "你的说有照片和视频我都可以看到哦～",
+    "别害怕，我不会做什么的",
+    "你已经看到这里了，看来很感兴趣啊～",
+    "这只是小惩罚",
+    "很抱歉打扰你了～",
+    "亲爱的～你还在看吗",
+    "我也没办法～",
+    "要不把你的系统重置吧？",
+    "哈哈～",
+    "开玩笑的",
+    "别难过了",
+    "你会是什么感受？亲爱的～",
+    "不要害怕，我会悄悄走的",
+    "不过，还要告诉你",
+    "享受折磨吧～"
+];
+
+// 弹出弹窗的函数
+function popup(index) {
+    // 如果超出数组范围，停止弹窗
+    if (index >= popupContents.length) return;
+    
+    // 显示默认弹窗
+    alert(popupContents[index]);
+    
+    // 等待用户关闭弹窗后，继续弹出下一个弹窗
+    setTimeout(function() {
+        popup(index + 1);
+    }, 100); // 这里设置一个很短的等待时间，以确保在用户关闭当前弹窗后立即弹出下一个弹窗
+}
+
+// 开始弹出第一个弹窗
+popup(0);
+</script>
+
+</body>
 </html>
